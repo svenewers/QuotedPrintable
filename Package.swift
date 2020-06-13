@@ -1,3 +1,5 @@
+// swift-tools-version:5.0
+
 //
 //  Package.swift
 //  QuotedPrintable
@@ -10,8 +12,10 @@ import PackageDescription
 
 let package = Package(
     name: "QuotedPrintable",
+    products: [
+        .library(name: "QuotedPrintable", targets: ["QuotedPrintable"]),
+    ],
     targets: [
-        Target(name:"QuotedPrintableTests", dependencies: [.Target(name: "QuotedPrintable")]),
-        Target(name:"QuotedPrintable")
+        .target(name:"QuotedPrintable")
     ]
 )
